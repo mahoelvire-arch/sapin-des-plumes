@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le Sapin des Plumes | Wattlab</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="snow" aria-hidden="true"></div>
+  <header class="topbar"><span>✦ WATTLAB ✦</span><span>NOËL 2026</span></header>
+  <main>
+    <section id="home" class="screen active hero">
+      <p class="eyebrow">WATTLAB PRÉSENTE</p>
+      <h1>Le Sapin <em>des Plumes</em></h1>
+      <p class="edition">ÉDITION NOËL 2026</p>
+      <div class="hero-tree" aria-hidden="true">🎄</div>
+      <p class="intro">Chaque plume porte une histoire.<br>Chaque vœu mérite une étoile.<br>Cette année, accroche un peu de ta magie à notre sapin de Noël.</p>
+      <button id="enterBtn" class="primary">Entrer dans la magie <span>✦</span></button>
+      <p class="tiny">Un Noël imaginé par Wattlab ♡</p>
+    </section>
+
+    <section id="identity" class="screen panel-screen">
+      <div class="panel">
+        <p class="eyebrow">ÉTAPE 01 · TON IDENTITÉ</p>
+        <h2>Bienvenue, chère plume</h2>
+        <p class="muted">Choisis ton nom de plume pour rejoindre la magie de Noël.</p>
+        <form id="identityForm">
+          <label for="pseudo">Ton pseudonyme <span class="required">*</span></label>
+          <input id="pseudo" maxlength="32" minlength="2" required placeholder="Ex. Plume de Minuit" autocomplete="nickname">
+          <label for="email">Ton e-mail <span class="optional">(facultatif)</span></label>
+          <input id="email" type="email" placeholder="plume@exemple.com" autocomplete="email">
+          <label class="check"><input id="consent" type="checkbox"><span>Je souhaite recevoir une carte de Noël personnalisée par e-mail le 25 décembre.</span></label>
+          <p class="hint">Démo : aucun e-mail ne sera envoyé. Pour l'instant, les données restent sur cet appareil.</p>
+          <button class="primary" type="submit">Choisir ma décoration →</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="ornaments" class="screen panel-screen">
+      <div class="panel wide">
+        <p class="eyebrow">ÉTAPE 02 · TA DÉCORATION</p>
+        <h2>Une décoration, une histoire</h2>
+        <p class="muted">Choisis celle qui représentera ta plume sur le sapin.</p>
+        <div class="choices" id="choices">
+          <button type="button" class="choice selected" data-ornament="⭐"><span class="emoji">⭐</span><strong>Étoile dorée</strong><small>La rêveuse</small></button>
+          <button type="button" class="choice" data-ornament="🔴"><span class="emoji">🔴</span><strong>Boule de Noël</strong><small>La passionnée</small></button>
+          <button type="button" class="choice" data-ornament="🔔"><span class="emoji">🔔</span><strong>Clochette</strong><small>La joyeuse</small></button>
+          <button type="button" class="choice" data-ornament="❄️"><span class="emoji">❄️</span><strong>Flocon</strong><small>La poétique</small></button>
+        </div>
+        <button id="ornamentNext" class="primary">Écrire mon vœu →</button>
+      </div>
+    </section>
+
+    <section id="wish" class="screen panel-screen">
+      <div class="panel">
+        <p class="eyebrow">ÉTAPE 03 · TON MESSAGE</p>
+        <h2>Un vœu pour Noël</h2>
+        <p class="muted">Écris un message bienveillant pour la communauté. Il restera secret jusqu'au 25 décembre.</p>
+        <form id="wishForm">
+          <label for="wishText">Ton message <span class="required">*</span></label>
+          <textarea id="wishText" required minlength="5" maxlength="350" rows="6" placeholder="Que chaque plume trouve le courage de raconter son histoire…"></textarea>
+          <p id="count" class="counter">0 / 350 caractères</p>
+          <button class="primary" type="submit">Accrocher mon vœu 🎄</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="tree" class="screen tree-screen">
+      <p class="eyebrow">LE JARDIN DES VŒUX</p>
+      <h2>Le Sapin des Plumes</h2>
+      <p id="treeSubtitle" class="muted">Les messages restent secrets jusqu'au 25 décembre.</p>
+      <div class="tree-layout">
+        <div class="tree-scene">
+          <div class="star">★</div>
+          <div class="tree-branches"></div>
+          <div class="garland garland-a"></div><div class="garland garland-b"></div>
+          <div id="ornamentLayer" class="ornament-layer"></div>
+          <div class="trunk"></div>
+          <div class="ground">✦ ✧ ✦</div>
+        </div>
+        <aside class="tree-aside">
+          <p class="eyebrow">UN PEU DE MAGIE</p>
+          <h3>Chaque vœu compte ♡</h3>
+          <p>Merci aux plumes qui font briller notre sapin. Clique sur une décoration pour découvrir qui l'a déposée.</p>
+          <p id="total" class="total">0 vœu accroché</p>
+          <div id="detail" class="detail" aria-live="polite">Sélectionne une décoration ✨</div>
+          <button id="addAnother" class="secondary">Ajouter une autre plume</button>
+          <button id="backHome" class="text-btn">← Retour à l'accueil</button>
+        </aside>
+      </div>
+      <p class="demo-note">Mode démonstration : seuls les messages enregistrés dans ce navigateur sont affichés.</p>
+    </section>
+  </main>
+  <footer>WATTLAB · LES HISTOIRES COMMENCENT APRÈS MINUIT…</footer>
+</body>
+</html>
